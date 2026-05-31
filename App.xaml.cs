@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using WpfSingleInstanceByEventWaitHandle;
 
 namespace FreshMealAlarm
 {
@@ -11,7 +12,9 @@ namespace FreshMealAlarm
     {
 		protected override void OnStartup(StartupEventArgs e)
 		{
-			base.OnStartup(e);
+            WpfSingleInstance.Make("FreshMealAlarm-Application");
+
+            base.OnStartup(e);
 
 			// Create an instance of your main window but do not show it yet
 			MainWindow mainWindow = new();

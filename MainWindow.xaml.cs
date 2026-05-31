@@ -14,6 +14,8 @@ namespace FreshMealAlarm
         public MainWindow()
         {
             InitializeComponent();
+
+			Title = Resource.AppName;
         }
 
 		protected override void OnSourceInitialized(EventArgs e)
